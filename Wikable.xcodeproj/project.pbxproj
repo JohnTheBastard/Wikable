@@ -492,6 +492,7 @@
 				F20716841E0CC05A00C4BA7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F23BB5391E083D91008907C1 /* Build configuration list for PBXProject "Wikable" */ = {
 			isa = XCConfigurationList;
