@@ -39,6 +39,15 @@
 * As a marketer I want to be able to use Fabric as a common point of communication with the app developers.
 
 ====================================================================================
+### Marketing viewpoint
+
+* Single tap anywhere on the screen and VoiceOver will speak identifying information from the item’s accessibility attributes 
+* Single swipe left or right and VoiceOver will navigate through visible accessibility items while reading them out loud. Right swipes move forward and down, while left swipes do the opposite.
+* Single swipe down to spell out the focused item letter-by-letter.
+* Double tap to select the item with focus.
+* Three finger swipe left or right to navigate forwards or backwards in a page view.
+
+====================================================================================
 ## Citations
 
 * Apple Frameworks:
