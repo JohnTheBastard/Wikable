@@ -90,6 +90,8 @@ class MarkupParser: NSObject {
         return sharedMarkupParser
     }
 
+    // A TextStyle is not a font attribute per se. It changes at the user's whim,
+    // thus we need to redetermine the correct attributes whenever they are needed.
     class var titleFont: UIFont {
         return UIFont.preferredFont(forTextStyle: .title1)
     }
@@ -134,6 +136,8 @@ class MarkupParser: NSObject {
         var style: UIFont
         var string: String
 
+        //TODO: reusing these regexes make for cleaner reading but using parens
+        //unnecessarily is expensive. Find a better way.
         let subSubHeadline = Regex(pattern: ".*====\\s*(.+)\\s*====.*")
         let subHeadline = Regex(pattern: ".*===\\s*(.+)\\s*===.*")
         let headline = Regex(pattern: ".*==\\s*(.+)\\s*==.*")
@@ -158,6 +162,8 @@ class MarkupParser: NSObject {
 
 
     private class func getPlaintextAndMarkupFor(_ title: String) {
+        //TODO: We're not currently using this method sine we
+        //don't need the Markup yet.
         WikipediaAPI.getArticleFor( title ) { (plaintext) in
             WikipediaAPI.getRawMarkup(for: title) { (markup) in
 
